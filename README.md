@@ -5,6 +5,7 @@
 </div>
 
 <p align="center">
+  <br>
   Proyecto web moderno y responsivo que permite generar y verificar contraseñas seguras. 
   Utiliza Flask para el backend y tecnologías como HTML, CSS, JavaScript y Bootstrap para el frontend.
 </p>
