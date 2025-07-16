@@ -1,35 +1,38 @@
-# Generador de Contraseñas Seguras
+<h1 align="center">🔐 Generador de Contraseñas Seguras</h1>
 
-![Vista del Proyecto](img/imagen.png)
+<div align="center">
+  <img src="img/imagen.png" alt="Vista del Proyecto" width="600" />
+</div>
 
-Este es un proyecto web moderno y responsivo desarrollado con Flask para el backend, y Bootstrap, HTML, CSS (personalizado) y JavaScript para el frontend. Permite a los usuarios generar contraseñas seguras y verificar la fortaleza de sus propias contraseñas, ofreciendo una interfaz intuitiva y consejos de seguridad.
+<p align="center">
+  Proyecto web moderno y responsivo que permite generar y verificar contraseñas seguras. 
+  Utiliza Flask para el backend y tecnologías como HTML, CSS, JavaScript y Bootstrap para el frontend.
+</p>
 
 ---
 
 ## 🚀 Características
 
-- **Generador de Contraseñas Personalizable**: Longitud ajustable, tipos de caracteres (mayúsculas, minúsculas, números, símbolos), exclusión de caracteres ambiguos y generación de múltiples contraseñas.
-- **Verificador de Fortaleza de Contraseña**: Análisis de fortaleza (Débil, Moderada, Fuerte, Muy Fuerte), cálculo de entropía, detección de contraseñas comunes y sugerencias de mejora.
-- **Interfaz de Usuario Amigable**: Diseño responsivo con Bootstrap, estilos personalizados y uso de Font Awesome y Google Fonts.
-- **Backend con Flask**: Servidor ligero para la lógica de generación y verificación.
+- **Generador de Contraseñas Personalizable**: Longitud, tipos de caracteres, exclusiones, múltiples resultados.
+- **Verificador de Fortaleza**: Evaluación de seguridad, entropía, contraseñas comunes y sugerencias.
+- **Interfaz Moderna**: Estilo responsivo con Bootstrap, Font Awesome y Google Fonts.
+- **Backend con Flask**: Servidor ligero y eficiente en Python.
 
 ---
 
 ## ⚙️ Tecnologías Utilizadas
 
 - **Backend**: Python, Flask  
-- **Frontend**: HTML5, CSS3 (custom), JavaScript (ES6+), Bootstrap 5.1.3, Font Awesome 6.0.0, Google Fonts
+- **Frontend**: HTML5, CSS3 (custom), JavaScript (ES6+), Bootstrap 5.1.3, Font Awesome, Google Fonts
 
 ---
 
-## 📦 Configuración y Ejecución
+## 🔧 Configuración y Ejecución
 
-Para una configuración detallada y pasos de ejecución, **consulta el archivo `app.py`**. Contiene toda la información necesaria para poner en marcha la aplicación.
-
-### Pasos rápidos:
+Para más detalles, revisa el archivo `app.py`. A continuación, pasos básicos:
 
 1. Asegúrate de tener Python instalado.
-2. Crea la estructura de carpetas: `templates/index.html`, `static/style.css`, `static/main.js`.
-3. Instala Flask:  
+2. Estructura de carpetas: `templates/index.html`, `static/style.css`, `static/main.js`.
+3. Instala Flask:
    ```bash
    pip install Flask
