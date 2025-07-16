@@ -1,0 +1,274 @@
+/* style.css */
+
+/* Variables de color y fuente actualizadas */
+:root {
+    --primary-color: #5d5c61; /* Un gris azulado oscuro para elementos clave */
+    --accent-color: #737373; /* Un gris medio para acentos y bordes */
+    --light-bg-color: #e0e0e0; /* Un gris muy claro para fondos sutiles */
+    --text-dark: #333333; /* Texto casi negro para alta legibilidad */
+    --text-medium: #555555; /* Texto más suave */
+    --white-color: #ffffff; /* Blanco puro para fondos de tarjeta */
+
+    --font-main: 'Saira', sans-serif; /* Fuente principal para la mayoría del texto */
+    --font-accent: 'Winky Rough', cursive; /* Fuente de acento para títulos o elementos especiales */
+    --font-monospace: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Fuente monoespaciada para contraseñas */
+}
+
+body {
+    background-color: var(--light-bg-color); /* Fondo muy claro */
+    min-height: 100vh;
+    font-family: var(--font-main); /* Fuentes limpias */
+    color: var(--text-dark); /* Texto oscuro pero suave */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Un poco de padding global */
+}
+.container {
+    max-width: 700px; /* Ancho un poco más reducido */
+    padding: 0; /* Quitamos padding del contenedor si el card ya tiene */
+}
+.card {
+    background-color: var(--white-color);
+    border: 1px solid var(--accent-color); /* Borde sutil */
+    border-radius: 12px; /* Más redondeado */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1); /* Sombra suave pero más visible */
+    padding: 30px; /* Padding interno aumentado */
+}
+.card-header {
+    background-color: transparent; /* Sin fondo en el encabezado */
+    border-bottom: 1px solid var(--accent-color); /* Solo un borde inferior */
+    color: var(--primary-color); /* Color primario para el título */
+    padding-bottom: 15px;
+    margin-bottom: 25px; /* Más espacio */
+    font-size: 2.2em; /* Título más grande */
+    font-weight: 700; /* Más negrita */
+    text-align: center;
+}
+.card-header h1 {
+    font-family: var(--font-accent); /* Usamos Winky Rough para el título principal */
+    font-size: 1.1em; /* Ajustamos el tamaño relativo al contenedor del h1 */
+    margin-bottom: 5px;
+    color: var(--primary-color);
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.05); /* Sutil sombra de texto */
+}
+.card-header h1 i {
+    color: var(--primary-color); /* Mismo color para el icono */
+    margin-right: 10px;
+}
+.card-header p {
+    font-family: var(--font-main); /* Saira para el subtitulo */
+    font-size: 0.9em;
+    color: var(--text-medium);
+}
+
+/* Contraseña generada */
+.password-display {
+    font-family: var(--font-monospace);
+    font-size: 1.2em; /* Más grande */
+    background-color: var(--light-bg-color); /* Fondo claro para la contraseña */
+    border: 1px dashed var(--accent-color); /* Borde punteado para estilo */
+    border-radius: 8px;
+    padding: 15px 20px; /* Más padding */
+    margin: 20px 0; /* Más margen */
+    word-break: break-all;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+.password-display .btn-sm {
+    background-color: var(--primary-color); /* Botón copiar con color primario */
+    color: var(--white-color);
+    border: none;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 0.9em;
+    transition: background-color 0.2s ease;
+}
+.password-display .btn-sm:hover {
+    background-color: #4a494d; /* Un tono un poco más oscuro al pasar el ratón */
+}
+
+
+/* Sliders */
+.form-range {
+    height: 8px; /* Más delgado */
+    border-radius: 4px;
+    background-color: var(--accent-color); /* Color del track del slider */
+    -webkit-appearance: none;
+    appearance: none;
+}
+.form-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color); /* Color del "pulgar" del slider */
+    cursor: grab;
+    margin-top: -5px; /* Para centrarlo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.form-range::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    cursor: grab;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+/* Checkboxes */
+.form-check-input:checked {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(93, 92, 97, 0.25); /* Sombra de enfoque con el color primario */
+}
+.form-label, .form-check-label {
+    font-weight: 600; /* Más negrita para las etiquetas */
+    color: var(--text-dark);
+}
+.form-check-label {
+    font-size: 0.95em;
+}
+
+/* Botones generales */
+.btn-generate, .btn-primary {
+    background-color: var(--primary-color); /* Color primario */
+    border: none;
+    border-radius: 8px; /* Bordes menos redondeados */
+    padding: 12px 30px; /* Padding más generoso */
+    font-weight: 700; /* Más negrita */
+    color: var(--white-color);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+.btn-generate:hover, .btn-primary:hover {
+    background-color: #4a494d; /* Un tono un poco más oscuro al pasar el ratón */
+    transform: translateY(-2px); /* Pequeño levantamiento */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* Sombra más pronunciada al pasar el ratón */
+}
+
+/* Secciones de título (H4) */
+h4 {
+    color: var(--primary-color); /* Títulos de sección con color primario */
+    font-size: 1.6em; /* Más grande */
+    margin-top: 40px; /* Más espacio arriba */
+    margin-bottom: 20px;
+    font-weight: 700; /* Más negrita */
+    display: flex;
+    align-items: center;
+}
+h4 i {
+    color: var(--primary-color);
+    margin-right: 10px;
+}
+
+/* Badges de fortaleza */
+.badge {
+    font-weight: 700; /* Más negrita */
+    padding: .4em .7em;
+    border-radius: 5px;
+    font-size: 0.85em;
+}
+/* Colores de badges (manteniendo los de Bootstrap para la funcionalidad visual) */
+.bg-danger { background-color: #dc3545 !important; }
+.bg-warning { background-color: #ffc107 !important; }
+.bg-info { background-color: #0dcaf0 !important; }
+.bg-success { background-color: #198754 !important; }
+
+/* Barra de progreso */
+.progress {
+    height: 6px; /* Más grueso */
+    border-radius: 3px;
+    background-color: var(--light-bg-color); /* Fondo de la barra de progreso */
+}
+.progress-bar {
+    border-radius: 3px;
+}
+
+small {
+    color: var(--text-medium); /* Texto pequeño con un gris más suave */
+}
+.alert {
+    font-size: 0.9em;
+    padding: 12px 18px; /* Más padding */
+    border-radius: 8px; /* Más redondeado */
+}
+.alert-warning {
+    background-color: #fff3cd; /* Amarillo de Bootstrap */
+    color: #664d03;
+    border-color: #ffecb5;
+}
+.alert-danger {
+    background-color: #f8d7da; /* Rojo de Bootstrap */
+    color: #842029;
+    border-color: #f5c2c7;
+}
+
+/* Grupo de input para verificar contraseña */
+.input-group .form-control {
+    border-radius: 8px 0 0 8px;
+    border: 1px solid var(--accent-color);
+    border-right: none;
+    padding: 12px 15px;
+    font-family: var(--font-main);
+}
+.input-group .btn-outline-secondary, .input-group .btn-primary {
+    border-radius: 0 8px 8px 0;
+    padding: 12px 15px;
+    border: 1px solid var(--accent-color);
+}
+.input-group .btn-outline-secondary {
+    background-color: var(--light-bg-color);
+    color: var(--text-dark);
+    border-color: var(--accent-color);
+    border-right: none; /* Asegura que no haya doble borde */
+}
+.input-group .btn-outline-secondary:hover {
+    background-color: var(--accent-color);
+    color: var(--white-color);
+    border-color: var(--accent-color);
+}
+.input-group .btn-primary {
+    border-left: 1px solid var(--accent-color); /* Separación visual del botón de ojo */
+}
+
+/* Tarjetas de características/consejos */
+.feature-card {
+    background-color: var(--white-color);
+    border: 1px solid var(--accent-color); /* Borde con color de acento */
+    border-left: 4px solid var(--primary-color); /* Línea lateral más pronunciada con el color primario */
+    border-radius: 8px; /* Más redondeado */
+    padding: 18px 20px;
+    margin-bottom: 15px; /* Espacio entre tarjetas */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05); /* Sombra muy sutil */
+    transition: transform 0.2s ease;
+}
+.feature-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08); /* Sombra un poco más visible al pasar el ratón */
+}
+.feature-card h6 {
+    color: var(--text-dark);
+    font-weight: 700;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+    display: flex;
+    align-items: center;
+}
+.feature-card h6 i {
+    margin-right: 10px;
+    color: var(--primary-color); /* Icono con color primario */
+    font-size: 1.1em;
+}
+.feature-card p {
+    font-size: 0.85em;
+    color: var(--text-medium);
+    margin-bottom: 0;
+    line-height: 1.4;
+}
